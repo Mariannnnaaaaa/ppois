@@ -8,11 +8,6 @@ namespace Lab1Tests
 	TEST_CLASS(Lab1Tests)
 	{
 	public:
-		TEST_METHOD(Check_int) {
-			BigInt a("577578");
-			int result = 577578;
-			Assert::IsTrue(result= a);
-		}
 		TEST_METHOD(Check_comparison1) {
 			BigInt a("577578");
 			BigInt b("-4774");
@@ -39,6 +34,13 @@ namespace Lab1Tests
 			BigInt b("-4774");
 			bool res = a <= b;
 			bool result = false;
+			Assert::AreEqual(result, res);
+		}
+		TEST_METHOD(Check_comparison5) {
+			BigInt a("577");
+			BigInt b("577");
+			bool res = a <= b;
+			bool result = true;
 			Assert::AreEqual(result, res);
 		}
 		TEST_METHOD(Check_summ1)
